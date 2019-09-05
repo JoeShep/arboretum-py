@@ -8,6 +8,13 @@ def release_animal(arboretum):
 
     if choice == "1":
         dolphin = RiverDolphin()
-        arboretum.rivers.append(dolphin)
+        count = 1
+        for river in arboretum.rivers:
+            print(f"{str(count)}. {river}")
+            count += 1
+        for coastline in arboretum.coastlines:
+            print(f"{str(count)}. {coastline}")
+        dolphin_choice = input("Choose where to release your river dolphin > ")
+
     if choice == "2":
         pass
